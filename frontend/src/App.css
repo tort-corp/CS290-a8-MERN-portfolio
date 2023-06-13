@@ -1,0 +1,355 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* Add fonts from the app's server 
+    @font-face {                
+      font-family: 'FontName';
+      src: url('FontName.woff2') format('woff2');
+    } 
+    ...or hosted services like Google Fonts 
+    @import url(//fonts.googleapis.com/css?family=Font+Name);
+  */
+  @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&family=Noto+Serif:wght@700&display=swap');
+
+  /* @import 'node_modules/modern-normalize/modern-normalize.css'; */
+        /* npm install modern-normalize
+          Resets elements for browser consistency.  
+          https://www.npmjs.com/package/modern-normalize
+        */         
+  
+  /* Component-specific stylesheets, if any. 
+    @import "component1.css";   
+  */
+  @import "~react-image-gallery/styles/css/image-gallery.css";
+
+/*   ----- Variables  -----  */
+:root {
+    --light-blue:hsla(221, 100%, 95%, 0.803);
+    --med-blue:hsl(220, 98%, 66%);
+    --dark-blue:hsl(220, 98%, 37%);
+    --complimentary-blue:hsla(188, 97%, 50%);
+    --extra-table-color:hsl(220, 95%, 76%);
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {} or :root {} */
+    background-color: ;
+    background-image:url(images/jelleyfish-aquarium-montereybay.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top left;
+    background-repeat: no-repeat;
+    color:var(--complimentary-blue);
+    font-family: 'Gothic A1', sans-serif; /* Define with at least one font name and its related generic family name.*/
+    margin:auto;
+    padding:4%;
+    max-width: 1400px;
+    min-width: 780px
+  
+    
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header {
+    color:var(--dark-blue);
+    background-color:var(--complimentary-blue);
+    margin: 0%;
+    padding: 0% 1%;
+    border-radius: 10px;
+  }
+  main {
+    color: var(--complimentary-blue);
+    background-color: var(--dark-blue);
+    margin: 0%;
+    padding: 0% 1%;
+    border-radius: 10px;
+
+
+    
+  }
+  section {}
+    article {}
+      #topic1 {}
+      #topic2 {}
+  div {}
+  aside {}
+  footer {
+    color:var(--dark-blue);
+    background-color:var(--complimentary-blue);
+    margin: 0%;
+    padding: 1% 1%;
+    border-radius: 10px;
+  }
+  
+  /* ----- Anchors ----- Text links */
+  a {}
+  a:link {} /*blue*/
+  a:hover {} /* cursor change */
+  a:active {} /* typicly red, cursor change */
+  a:visited {} /* typicly purple */
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  nav {padding: 3px;}
+  nav a {
+    color:var(--dark-blue); 
+    background-color:var(--light-blue);
+    border-top-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+    padding: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+
+    text-decoration:none;
+  }
+  nav a:hover {
+    color:var(--light-blue); 
+    background-color:var(--dark-blue);
+    border:2px solid;
+    
+  }
+
+
+  .article_nav {
+    text-align: center;
+    border-top-left-radius:100px ;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius:100px ;
+    border-bottom-left-radius: 100px;
+  }
+  
+  /*  -----  Typography  ----- */
+  p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {}
+  
+  h1, h2, h3, h4, h5, h6 {font-family: 'Noto Serif', serif;} 
+  h1 {padding: 0.5%;}
+  h2 {}
+  h3 {}
+  h4 {}
+  h5 {}
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+  table {
+    font-family: sans-serif;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 2%;
+   
+   
+    
+  }
+  caption {}
+  thead {
+
+  }
+  tbody {padding: 3px 30px 3px 5px;}
+  tfoot {
+    margin-left: auto;
+    margin-left: auto;
+  }
+  tr {   
+  }
+    tr:nth-child(even) {
+      background-color: var(--light-blue);
+      color: var(--dark-blue);
+    }
+    tr:nth-child(odd) {
+          background-color: var(--extra-table-color);
+          color: var(--dark-blue);
+    }
+
+  th {
+    border: 1px solid;
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+   }
+  td {
+    border: 1px solid;
+    padding: 3px 3px 3px 10px;
+    text-align: left;
+  }
+    td:nth-child(even) {
+ 
+
+    }
+    td:nth-child(1) {
+ 
+    }
+
+  colgroup {}
+  data {}
+  datalist {}
+  
+  
+  /*  ----- Form ----- */
+  form, button, input, select, textarea {
+    font-family: 'Gothic A1', sans-serif;  /* forms dont inherit the font-family automatically so place it here too*/
+    padding-bottom: 2px;
+    text-align: center;
+
+    
+  }
+  fieldset {
+    border: 3px solid var(--complimentary-blue); /*fill in some possiblities*/
+    background-color: ;                          /*fill in  some possiblities*/
+    margin-bottom: 2%;
+  }
+  legend {                      /*the legend is difficult to style*/
+    background-color:var(--med-blue);         
+    border: ;                   
+  }
+  label {
+    display: block;           /* gives each input its own line*/
+    margin-top: 3%;
+  }
+  
+
+
+  button {
+    background-color: ;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+ 
+  }
+  input {
+    padding: 1%;
+    font-size: 125%;
+  }
+  output {}
+  meter {}
+  progress {}
+  select {}
+    optgroup {}
+    option {}
+  textarea {
+    font-size: 125%;
+  }
+
+
+  :focus{           /* changes the color where the mouse is */
+    background-color: yellowgreen;  /*change */
+  }
+  *:required{       /* required entry on forms */
+    border: 2px solid red;
+  }
+
+
+
+  /* ----- Media ----- */
+  figure {
+    line-height: 1;
+  }
+    figcaption {
+      padding: 1%;
+      margin: 1%;
+    }
+    figure img {
+      border:1px, solid, var(--complimentary-blue);
+    }
+
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  /* .gallery{
+    
+    flex-wrap: wrap;
+    display: flex;
+
+  } */
+
+  .largerCheckbox{
+    width: 20px;
+    height: 20px;
+  }
+
+  .button-fieldset-container{
+    text-align: center;
+  }
+  
+  .table_numbers{
+    text-align:right
+  }
+
+  .order_form{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .notes_box{
+    width: 700px;
+  }
+
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
+  

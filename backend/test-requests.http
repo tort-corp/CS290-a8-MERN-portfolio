@@ -1,0 +1,81 @@
+### CREATE five documents.
+POST http://localhost:3000/repairs HTTP/1.1
+content-type: application/json
+
+{
+    "notes": "Changed spark plugs",
+    "date": "2018-7-12",
+    "mileage": "158600"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/repairs HTTP/1.1
+content-type: application/json
+
+{
+    "notes": "Changed front shocks",
+    "date": "Oct 12, 2017",
+    "mileage": "150800"
+}
+
+### CREATE 3
+POST http://localhost:3000/repairs HTTP/1.1
+content-type: application/json
+
+{
+    "notes": "Found leak in power steering res (probably crack in plastic). Added small amount of stop leak. ",
+    "date": "Nov 13, 2017",
+    "mileage": "154600"
+}
+
+### CREATE 4
+POST http://localhost:3000/repairs HTTP/1.1
+content-type: application/json
+
+{
+    "notes": "Changed out power steering pump and res. Flushed power steering fluid. Changed oil. Put in Techron concentrate ",
+    "date": "Jan 12, 2018",
+    "mileage": "155600"
+}
+
+### CREATE 5
+POST http://localhost:3000/repairs HTTP/1.1
+content-type: application/json
+
+{
+    "notes": "Changed oil and put in fuel system cleaner",
+    "date": "Aug 21, 2018",
+    "mileage": "158800"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/repairs HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/repairs/648741b0a255444d9ccf4881 HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the id in the following request with one that exists
+### and update the title, year, and/or language:
+PUT http://localhost:3000/repairs/648741b0a255444d9ccf4881 HTTP/1.1
+content-type: application/json
+
+{
+    "notes": "Changed spark plugs",
+    "date": "July 16, 2018",
+    "mileage": "158300"
+}
+
+### DELETE by ID (no response provided)
+DELETE http://localhost:3000/repairs/648741b0a255444d9ccf4881 HTTP/1.1
+
+
+### DELETEs ALL documents!
+DELETE http://localhost:3000/repairs/ HTTP/1.1
+
