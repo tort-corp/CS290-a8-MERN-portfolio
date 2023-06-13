@@ -63,7 +63,7 @@ function RepairPage({ setRepair }) {
                 repairs={repairs} 
                 onEdit={onEditRepair} 
                 onDelete={onDeleteRepair} 
-                //onCreate={onCreateRepair}
+                onCreate={onCreateRepair}
             />
         </>
     );

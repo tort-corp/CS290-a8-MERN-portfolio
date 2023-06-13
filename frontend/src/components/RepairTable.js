@@ -1,7 +1,8 @@
 import React from 'react';
 import RepairRow from './RepairRow';
+import { MdPlaylistAdd } from 'react-icons/md';
 
-function RepairTable({ repairs, onDelete, onEdit }) {
+function RepairTable({ repair, repairs, onDelete, onEdit, onCreate }) {
     return (
         <table id="repairs">
             <caption>Add and Edit Repairs</caption>
@@ -12,6 +13,8 @@ function RepairTable({ repairs, onDelete, onEdit }) {
                     <th>Mileage</th>
                     <th>Delete</th>
                     <th>Edit</th>
+                    <th>Add<MdPlaylistAdd onClick={() => onCreate(repair)} /></th>
+                    
                     
                 </tr>
             </thead>
@@ -22,7 +25,8 @@ function RepairTable({ repairs, onDelete, onEdit }) {
                         repair={repair} 
                         key={i}
                         onDelete={onDelete}
-                        onEdit={onEdit} 
+                        onEdit={onEdit}
+                        onCreate={onCreate}
                     />)}
             </tbody>
         </table>
