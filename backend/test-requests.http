@@ -5,7 +5,7 @@ content-type: application/json
 {
     "notes": "Changed spark plugs",
     "date": "2018-7-12",
-    "mileage": "158600"
+    "mileage": "158600",
 }
 
 

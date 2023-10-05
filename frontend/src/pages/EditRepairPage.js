@@ -26,7 +26,7 @@ export const EditRepairPage = ({ repairToEdit }) => {
             const errMessage = await response.json();
             alert(`Repair document not edited; status ${response.status}. ${errMessage.Error}`);
         }
-        redirect("/");
+        redirect("/repair");
     }
 
     return (

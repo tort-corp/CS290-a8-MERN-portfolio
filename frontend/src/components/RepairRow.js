@@ -6,8 +6,8 @@ function RepairRow({ repair, onEdit, onDelete}) {
     return (
         <tr>
             <td>{repair.notes}</td>
-            <td>{repair.date.slice(0,10)}</td>
-            <td>{repair.mileage}</td>
+            <td class="table_numbers">{repair.date.slice(0,10)}</td>
+            <td class="table_numbers">{repair.mileage}</td>
             <td><MdDeleteForever onClick={() => onDelete(repair._id)} /></td>
             <td><MdBuild onClick={() => onEdit(repair)} /></td>
         </tr>

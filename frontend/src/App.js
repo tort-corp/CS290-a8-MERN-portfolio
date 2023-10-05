@@ -2,13 +2,18 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-// Import styles, media
+// Import Components, styles, media
+import Nav from './components/Nav';
 import './App.css';
+
 //data
 import products from './data/products.js'
 
-// Import Components and Pages
-import Nav from './components/Nav';
+// Import Pages (but only the ones you need).
+// For Create and Edit, use the form OR table design; not both.
+// If your schema requires LONG data input, then use the FORM design.
+// If your schema requires SHORT data input, then use the TABLE design.
+
 import HomePage from './pages/HomePage.js';
 import AddRepairPage from './pages/AddRepairPage.js';
 import EditRepairPage from './pages/EditRepairPage.js';
@@ -38,6 +43,9 @@ function App() {
           <main>
           <section className="App-article">
                 <Routes> 
+                  {/*Add or update the <Route> tags for each page:
+                    <Route path="/page" element={<PageName params />} />
+                    Match the path with the page name (but only use a slash "/" for the HomePage path).  */}
                     <Route path="/" element={<HomePage />} />
                     <Route path="/topics" element={<TopicsPage />} />
                     <Route path="/gallery" element={<GalleryPage />} /> 

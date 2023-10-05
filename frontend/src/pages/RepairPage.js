@@ -39,7 +39,7 @@ function RepairPage({ setRepair }) {
     // DELETE a single repair 
     const onDeleteRepair = async _id => {
         const response = await fetch(`/repairs/${_id}`, { method: 'DELETE' });
-        if (response.status === 204) {
+        if (response.status === 200) {
             const getResponse = await fetch('/repairs');
             const repairs = await getResponse.json();
             setRepairs(repairs);

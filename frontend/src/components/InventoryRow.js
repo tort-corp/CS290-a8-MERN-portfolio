@@ -9,7 +9,7 @@ function InventoryRow({ item }) {
         <tr>
             <td>{item.company}</td>
             <td>{item.product} </td>
-            <td>
+            <td class="table_numbers">
                 {item.price.toLocaleString('en-US', {
                     style: 'currency',
                     currency: 'USD',

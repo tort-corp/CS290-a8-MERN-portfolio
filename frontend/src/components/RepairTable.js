@@ -13,7 +13,7 @@ function RepairTable({ repair, repairs, onDelete, onEdit, onCreate }) {
                     <th>Mileage</th>
                     <th>Delete</th>
                     <th>Edit</th>
-                    <th>Add<MdPlaylistAdd onClick={() => onCreate(repair)} /></th>
+                    <th><MdPlaylistAdd onClick={() => onCreate(repair)} /></th>
                     
                     
                 </tr>
